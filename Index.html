@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d19">
+
+<title>SILLAGE PUB | Agence publicitaire intelligente</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080d19;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #101a2d;
+  border-bottom: 1px solid #263752;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #42e6b5;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg,#101a2d,#172e46);
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #42e6b5;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+  color: #c5d1df;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 25px;
+  background: #42e6b5;
+  color: #08121d;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 55px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #142239;
+  border: 1px solid #263752;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.card h3 {
+  color: #42e6b5;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #bdc9d8;
+  line-height: 1.7;
+}
+
+.dashboard {
+  background: #101a2d;
+}
+
+.dashboard input,
+.dashboard select,
+.dashboard textarea {
+  width: 100%;
+  max-width: 450px;
+  padding: 14px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 7px;
+  border: 1px solid #344763;
+  background: #080d19;
+  color: white;
+}
+
+.dashboard button {
+  padding: 14px 25px;
+  border: none;
+  border-radius: 7px;
+  background: #42e6b5;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#resultat {
+  margin-top: 20px;
+  color: #42e6b5;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #101a2d;
+  color: #aab7c8;
+}
+
+@media(max-width:600px) {
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  nav {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SILLAGE PUB</div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#studio">Studio IA</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="accueil">
+  <h1>Votre publicité.<br>
+  Notre <span>intelligence.</span></h1>
+
+  <p>
+    Bienvenue chez SILLAGE PUB.
+    La plateforme intelligente qui transforme
+    vos idées, produits et entreprises en
+    campagnes publicitaires professionnelles.
+  </p>
+
+  <a href="#studio" class="btn">
+    Découvrir notre studio
+  </a>
+</section>
+
+<section id="services">
+  <h2>Nos solutions professionnelles</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>🎬 Publicité vidéo IA</h3>
+      <p>
+        Préparation de concepts et de vidéos
+        publicitaires créatives.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎨 Design publicitaire</h3>
+      <p>
+        Création de concepts visuels,
+        affiches et visuels commerciaux.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Réseaux sociaux</h3>
+      <p>
+        Préparation de contenus pour TikTok,
+        Instagram et Facebook.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Marketing digital</h3>
+      <p>
+        Stratégies de communication
+        et développement commercial.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="dashboard" id="studio">
+
+  <h2>Mon studio publicitaire</h2>
+
+  <p>Préparez votre prochaine campagne.</p>
+
+  <form id="formulaire">
+
+    <input
+      type="text"
+      id="entreprise"
+      placeholder="Nom de votre entreprise"
+      required
+    >
+
+    <input
+      type="text"
+      id="produit"
+      placeholder="Produit à promouvoir"
+      required
+    >
+
+    <select id="format">
+      <option value="Vidéo publicitaire">
+        Vidéo publicitaire
+      </option>
+      <option value="Affiche publicitaire">
+        Affiche publicitaire
+      </option>
+      <option value="Publication réseaux sociaux">
+        Publication réseaux sociaux
+      </option>
+    </select>
+
+    <textarea
+      id="description"
+      placeholder="Décrivez votre publicité"
+      rows="4"
+    ></textarea>
+
+    <button type="submit">
+      Préparer ma campagne
+    </button>
+
+  </form>
+
+  <div id="resultat"></div>
+
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 SILLAGE PUB</p>
+  <p>Votre partenaire en publicité intelligente.</p>
+  <p>Abidjan - Côte d'Ivoire</p>
+</footer>
+
+<script>
+document.getElementById("formulaire")
+.addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  const entreprise =
+    document.getElementById("entreprise").value;
+
+  const produit =
+    document.getElementById("produit").value;
+
+  const format =
+    document.getElementById("format").value;
+
+  const description =
+    document.getElementById("description").value;
+
+  const campagne = {
+    entreprise,
+    produit,
+    format,
+    description,
+    date: new Date().toLocaleString()
+  };
+
+  let campagnes =
+    JSON.parse(localStorage.getItem("campagnes") || "[]");
+
+  campagnes.push(campagne);
+
+  localStorage.setItem(
+    "campagnes",
+    JSON.stringify(campagnes)
+  );
+
+  document.getElementById("resultat").innerHTML =
+    "✅ Votre campagne a été enregistrée sur cet appareil !";
+
+});
+</script>
+
+</body>
+</html>
